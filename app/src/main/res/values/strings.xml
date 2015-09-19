@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="login_label">Username:</string>
+    <string name="login_text_hint">Username</string>
+    <string name="btn_login">Sign In</string>
+    <string name="forgot_lbl">Forgot Password</string>
+    <string name="remember_lbl">Remember Me</string>
+    <string name="pw_hint">Password</string>
+    <string name="page_lbl">Please Sign In</string>
+</resources>
