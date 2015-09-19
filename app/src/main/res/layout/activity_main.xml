@@ -20,6 +20,8 @@
         android:theme="@android:style/Theme.Material.Light"
         android:typeface="monospace" />
 
+    <!-- TODO: some stuff here -->
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
