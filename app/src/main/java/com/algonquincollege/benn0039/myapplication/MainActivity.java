@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -24,7 +25,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
 
                 // Display toast message when login button clicked
-                Toast.makeText(getApplicationContext(), "Login Button :: OnClick()", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.tst_loginOnClick), Toast.LENGTH_SHORT).show();
 
                 // Reference and get value of username field
                 EditText userName = (EditText) findViewById( R.id.email_input );
@@ -41,7 +42,7 @@ public class MainActivity extends Activity {
                 // Validate that there is text in the username field
                 if (user.isEmpty() || user == null) {
 
-                    userName.setError("Enter Your Email Address");
+                    userName.setError(getString(R.string.err_login));
                 }
 
                 /*
@@ -57,6 +58,16 @@ public class MainActivity extends Activity {
             }
         });
 
+        // Reference and create listener for forgot password
+        TextView forgotPassword = (TextView) findViewById(R.id.forgot_pw);
+
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String tstForgotString = getString(R.string.tst_forgotOnClick);
+                Toast.makeText(getApplicationContext(),tstForgotString, Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
