@@ -10,4 +10,9 @@
     <string name="remember_lbl">Remember Me</string>
     <string name="pw_hint">Password</string>
     <string name="page_lbl">Please Sign In</string>
+    <string name="benn0039">benn0039</string>
+    <string name="chk_remember">"Remember Me"</string>
+    <string name="tst_user">"Username: "</string>
+    <string name="tst_password">"Password: "</string>
+    <string name="tst_chk_state">"Checkbox State: "</string>
 </resources>

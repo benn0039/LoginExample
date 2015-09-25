@@ -40,7 +40,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_login"
-        android:id="@+id/button"
+        android:id="@+id/btn_login"
         android:theme="@android:style/Theme.Light"
         android:height="30dp"
         android:alpha=".6"
@@ -56,18 +56,18 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/forgot_lbl"
-        android:id="@+id/textView"
+        android:id="@+id/forgot_pw"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:textColor="@android:color/secondary_text_dark" />
 
-    <TextView
+    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/remember_lbl"
-        android:id="@+id/textView2"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:textColor="@android:color/secondary_text_dark" />
+        android:text="@string/chk_remember"
+        android:id="@+id/checkBox"
+        android:textColor="@android:color/secondary_text_dark"
+        android:layout_alignTop="@+id/forgot_pw"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

@@ -4,6 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -11,6 +16,48 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button loginButton = (Button) findViewById( R.id.btn_login );
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Display toast message when login button clicked
+                Toast.makeText(getApplicationContext(), "Login Button :: OnClick()", Toast.LENGTH_SHORT).show();
+
+                // Reference and get value of username field
+                EditText userName = (EditText) findViewById( R.id.email_input );
+                String user = userName.getText().toString();
+
+                // Reference and get value of password field
+                EditText passWord = (EditText) findViewById( R.id.pass_input );
+                String password = passWord.getText().toString();
+
+                // Reference and get state of Remember me checkbox.
+                CheckBox remember = (CheckBox) findViewById(R.id.checkBox);
+                 Boolean checkboxState = remember.isChecked();
+
+                // Validate that there is text in the username field
+                if (user.isEmpty() || user == null) {
+
+                    userName.setError("Enter Your Email Address");
+                }
+
+                /*
+                 *  Trying to keep to best practices by using string resource.
+                 *
+                 *  Display username, password and checkbox status in toast message.
+                 */
+                String tstString = getString(R.string.tst_user) + user +
+                        '\n' + getString(R.string.tst_password) + password +
+                        '\n' + getString(R.string.tst_chk_state) + checkboxState;
+
+                Toast.makeText(getApplicationContext(), tstString, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 
     @Override
