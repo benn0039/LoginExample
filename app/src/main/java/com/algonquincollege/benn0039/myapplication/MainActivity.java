@@ -24,8 +24,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                // Display toast message when login button clicked
-                Toast.makeText(getApplicationContext(), getString(R.string.tst_loginOnClick), Toast.LENGTH_SHORT).show();
+
 
                 // Reference and get value of username field
                 EditText userName = (EditText) findViewById( R.id.email_input );
@@ -43,18 +42,28 @@ public class MainActivity extends Activity {
                 if (user.isEmpty() || user == null) {
 
                     userName.setError(getString(R.string.err_login));
+                    userName.requestFocus();
+                    return;
                 }
+                else {
 
-                /*
+                    // Display toast message when login button clicked
+                    Toast.makeText(getApplicationContext(), getString(R.string.tst_loginOnClick), Toast.LENGTH_SHORT).show();
+
+                    /*
                  *  Trying to keep to best practices by using string resource.
                  *
                  *  Display username, password and checkbox status in toast message.
                  */
-                String tstString = getString(R.string.tst_user) + user +
-                        '\n' + getString(R.string.tst_password) + password +
-                        '\n' + getString(R.string.tst_chk_state) + checkboxState;
+                    String tstString = getString(R.string.tst_user) + user +
+                            '\n' + getString(R.string.tst_password) + password +
+                            '\n' + getString(R.string.tst_chk_state) + checkboxState;
 
-                Toast.makeText(getApplicationContext(), tstString, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), tstString, Toast.LENGTH_SHORT).show();
+
+                }
+
+
             }
         });
 
