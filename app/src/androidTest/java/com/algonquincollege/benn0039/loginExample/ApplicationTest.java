@@ -1,4 +1,4 @@
-package com.algonquincollege.benn0039.myapplication;
+package com.algonquincollege.benn0039.loginExample;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
